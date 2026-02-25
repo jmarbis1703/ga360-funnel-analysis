@@ -29,25 +29,7 @@ layout against the current hero-banner approach.
 
 ---
 
-## Bottleneck 2: Product View to Add to Cart (59.6% Drop)
-**The Problem.** The funnel from Category View to Product View is incredibly 
-efficient (only a 0.2% drop) However, of the **124,188** sessions that reach 
-a Product Detail Page, **59.6% (74,049 sessions)** leave without adding it to
-their cart. Visitors are browsing but not committing. This suggests friction 
-in the product detail page, due to: unclear pricing, insufficient imagery,
-missing social proof, or poor calls to action.
-
-
-**Strategic Recommendation.** Audit the product detail page for conversion barriers.  
-Prioritize: adding customer reviews and ratings, improving product photography 
-(multiple angles, lifestyle images), displaying inventory urgency signals 
-("Only 3 left"), and simplifying the Add to Cart buttonplacement. Run heatmap
-analysis (Hotjar or equivalent) on the product detail page to identify 
-scroll-depth abandonment.
-
----
-
-## Bottleneck 3: Mobile Conversion Gap (3.9x Behind Desktop)
+## Bottleneck 2: Mobile Conversion Gap (3.9x Behind Desktop)
 **The Problem.** Mobile sessions convert at 0.41% versus 1.58% on desktop.
 This gap is statistically significant (Chi-Squared p < 0.001). Mobile
 represents 23% of all sessions (208,725) but only 7.4% of transactions.
@@ -63,6 +45,24 @@ payment options (Apple Pay, Google Pay), improving page load speed on mobile
 (target under 3 seconds), and ensuring tap-target sizes meet accessibility
 standards. Measure progress via adedicated mobile conversion rate KPI on a 
 weekly cadence.
+
+---
+
+## Bottleneck 3: Product View to Add to Cart (59.6% Drop)
+**The Problem.** The funnel from Category View to Product View is incredibly 
+efficient (only a 0.2% drop) However, of the **124,188** sessions that reach 
+a Product Detail Page, **59.6% (74,049 sessions)** leave without adding it to
+their cart. Visitors are browsing but not committing. This suggests friction 
+in the product detail page, due to: unclear pricing, insufficient imagery,
+missing social proof, or poor calls to action.
+
+
+**Strategic Recommendation.** Audit the product detail page for conversion barriers.  
+Prioritize: adding customer reviews and ratings, improving product photography 
+(multiple angles, lifestyle images), displaying inventory urgency signals 
+("Only 3 left"), and simplifying the Add to Cart buttonplacement. Run heatmap
+analysis (Hotjar or equivalent) on the product detail page to identify 
+scroll-depth abandonment.
 
 ---
 
