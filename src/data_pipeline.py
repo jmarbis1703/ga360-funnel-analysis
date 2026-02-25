@@ -131,7 +131,6 @@ def remove_outliers(df):
           f"{capped_time_count + capped_rev_count:,} values capped)")
     return df
 
-#cleaning
 def clean_product_performance(df):
     """Normalizing values to Uncategorized to ensure category level aggregation remain accurate."""
 
