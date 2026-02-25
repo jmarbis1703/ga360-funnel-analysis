@@ -75,7 +75,7 @@ conversion rate. Identify which partners send engaged traffic versus
 bot-like or misaligned traffic. Renegotiate or terminate partnerships
 that produce sub-0.05% conversion rates. Redirect budget toward organic
 search optimization (currently 0.91% CR with room to grow) and paid
-search (1.86% CR, the second-highest converting channel). Implement UTM
+search (1.86% CR, the third-highest converting channel). Implement UTM
 discipline to track referral sub-sources.
 
 ---
@@ -105,7 +105,7 @@ wasted server costs and focus marketing spend exclusively on US audiences.
 | PDP optimization (60% to 50%)       |                   800             |           $123,000       |
 | Mobile UX overhaul (0.41% to 0.80%) |                   810             |           $125,000       |
 | Referral audit + reallocation       |                   200             |            $31,000       |
-| **Total estimated impact**          |              **~3,110**           |        **~$479,000**     |
+| **Total estimated impact**          |              **~2,463**           |        **~$379,500**     |
 
 *Estimates based on current average transaction value of $154.10 and
 observed funnel volumes. Actual results will depend on implementation
