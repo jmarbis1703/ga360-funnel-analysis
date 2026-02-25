@@ -30,10 +30,13 @@ layout against the current hero-banner approach.
 ---
 
 ## Bottleneck 2: Product View to Add to Cart (59.6% Drop)
-**The Problem.** 74,049 sessions view a product but do not add it to their
-cart. Visitors are browsing but not committing.   
-This suggests friction in the product detail page, due to: unclear pricing, 
-insufficient imagery, missing social proof, or poor calls to action.
+**The Problem.** The funnel from Category View to Product View is incredibly 
+efficient (only a 0.2% drop) However, of the **124,188** sessions that reach 
+a Product Detail Page, **59.6% (74,049 sessions)** leave without adding it to
+their cart. Visitors are browsing but not committing. This suggests friction 
+in the product detail page, due to: unclear pricing, insufficient imagery,
+missing social proof, or poor calls to action.
+
 
 **Strategic Recommendation.** Audit the product detail page for conversion barriers.  
 Prioritize: adding customer reviews and ratings, improving product photography 
