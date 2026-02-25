@@ -85,18 +85,20 @@ Conservative target (0.41% → 0.80%): **~$125K** uplift.
 ![Device Funnel Comparison](assets/device_funnel.png)
 
 ---
-### 3. Product Pages Browse Well but Fails to convert
-74,049 sessions reach a product page; 59.6% leave without adding to cart.
-Users are interested enough to click in, but something on the page kills
-momentum. The likely culprits, based on common PDP failure patterns at this
-drop-off magnitude: unclear pricing, single-angle photography, absent
-reviews, or a buried Add to Cart button.
+### 3. Category Navigation is Flawless, but Product Pages Kill Momentum   
+**The Problem:** The funnel from Category View to Product View is incredibly 
+efficient (only a 0.2% drop). However, of the **124,188** sessions that reach 
+a Product Detail Page (PDP), **59.6% (74,049 sessions)** leave without adding 
+anything to their cart. Visitors have high intent to view products, but the page
+content actively stops them from committing. The likley causes, based on common
+PDP failure patterns at this drop-off magnitude: unclear pricing, single-angle 
+photography, absent reviews, or a buried Add to Cart button.
 
-**Data-backed Recommendations:** Run heatmap analysis (Hotjar or equivalent) to
-identify scroll-depth abandonment. Prioritize adding customer reviews,
-multi-angle product imagery, inventory urgency signals, and
-repositioning the Add to Cart CTA. 
-Target: reduce drop-off to 50%, yielding **~$23.5K** in additional revenue.
+**Data-backed Recommendations:** Run heatmap analysis (Hotjar or equivalent) 
+to identify scroll-depth abandonment. Prioritize adding customer reviews, 
+multi-angle product imagery, inventory urgency signals, and repositioning the 
+Add to Cart CTA above the fold. Target: reduce PDP drop-off to 50%, yielding
+**~$23.5K** in additional revenue.
 
 ---
 
