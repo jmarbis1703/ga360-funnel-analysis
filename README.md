@@ -10,7 +10,7 @@
 ## The Business Case
 The store converts **1.28%** of sessions end-to-end. That number hides five
 distinct failure modes, each backed by funnel data and Chi-Squared significance
-testing. Fix them in priority order and the model projects **~3,110 additional
+testing. Fix them in priority order and the model projects ** 3,110 additional
 transactions (~$479K)** in incremental revenue.
 
 | What's Broken | Scale of the Problem | Why It Matters | Estimated Revenue Upside |
@@ -359,7 +359,7 @@ open strategy_brief.md || xdg-open strategy_brief.md || start strategy_brief.md
 
 ## Dependencies
 
-Python 3.9+ — pandas, numpy, matplotlib, scipy, scikit-learn.
+Python 3.9+ - pandas, numpy, matplotlib, scipy, scikit-learn.
 See `requirements.txt` for pinned versions.
 
 ---
