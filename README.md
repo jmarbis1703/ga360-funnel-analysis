@@ -304,25 +304,29 @@ highly significant. Full test outputs are in `notebooks/funnel_analysis.ipynb`.
 
 ```
 ga360-funnel-analysis/
-├── README.md                        # This file
-├── requirements.txt                 # Python dependencies
-├── data/
-│   ├── session_funnel.csv           # 903,653 session-level funnel records
-│   └── product_performance.csv      # 3,470 product-level revenue records
-├── src/
-│   └── data_pipeline.py             # ETL: cleaning, feature engineering
-├── notebooks/
-│   └── funnel_analysis.ipynb        # Main analysis notebook
-├── assets/
-│   ├── funnel_volume.png            # Funnel volume bar chart
-│   ├── funnel_waterfall.png         # Leakage waterfall chart
-│   ├── device_funnel.png            # Device funnel overlay
-│   ├── engagement_conversion.png    # Engagement depth vs. conversion
-│   ├── channel_analysis.png         # Traffic channel comparison
-│   ├── geo_concentration.png        # Geographic revenue concentration
-│   └── product_scatter.png          # Product traffic vs. revenue scatter
-└── docs/
-    └── strategy_brief.md            # Full stakeholder strategy document
+├── .gitattributes          # Git configuration for path-specific settings
+├── .gitignore              # Specifies intentionally untracked files to ignore
+├── LICENSE                 # Legal terms for project usage (MIT License)
+├── README.md               # Project overview, funnel architecture, and roadmap
+├── requirements.txt        # Python dependencies (pandas, numpy, scipy, etc.)
+├── assets/                 # Visualizations and data plots
+│   ├── category_revenue.png
+│   ├── channel_analysis.png
+│   ├── device_funnel.png
+│   ├── engagement_conversion.png
+│   ├── funnel_volume.png
+│   ├── funnel_waterfall.png
+│   ├── geo_concentration.png
+│   └── product_scatter.png
+├── data/                   # Processed datasets for analysis
+│   ├── product_performance.csv  # 3,470 product-level revenue records
+│   └── session_funnel.csv       # 903,653 session-level funnel records
+├── docs/                   # Documentation for stakeholders
+│   └── strategy_brief.md   # Executive summary and strategic recommendations
+├── notebooks/              # Exploratory Data Analysis (EDA)
+│   └── funnel_analysis.ipynb    # Main notebook with statistical rigor (Chi-Squared)
+└── src/                    # Source code for the data pipeline
+    └── data_pipeline.py    # ETL: Cleaning, processing, and feature engineering
 ```
 
 ---
