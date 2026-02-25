@@ -56,7 +56,7 @@ of the funnel.
 **Data-backed Recommendations:** Redesign the homepage to surface category entry
 points above the fold. A/B test a "Shop by Category" grid against the current
 hero-banner layout. 
-Target: reduce drop-off to 75%, adding ~101K sessions
+Target: reduce drop-off to 75%, adding 101K sessions
 to Category View and an estimated **~$200K** in revenue.
 
 ![Funnel Volume by Stage](assets/funnel_volume.png)
