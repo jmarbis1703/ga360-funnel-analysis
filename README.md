@@ -28,10 +28,10 @@ transactions (~$479K)** in incremental revenue.
 ```mermaid
 graph LR
     A["Home<br/>903,653"] -->|"86.2% drop"| B["Category View<br/>124,494"]
-    B -->|"40.5% drop"| C["Product View<br/>74,049"]
-    C -->|"59.6% drop"| D["Add to Cart<br/>29,932"]
-    D -->|"46.3% drop"| E["Checkout<br/>16,076"]
-    E -->|"28.0% drop"| F["Transaction<br/>11,575"]
+    B -->|"0.2% drop"| C["Product View<br/>124,188"]
+    C -->|"59.6% drop"| D["Add to Cart<br/>50,139"]
+    D -->|"55.3% drop"| E["Checkout<br/>22,407"]
+    E -->|"48.4% drop"| F["Transaction<br/>11,552"]
 
     style A fill:#ef4444,color:#fff
     style B fill:#f97316,color:#fff
