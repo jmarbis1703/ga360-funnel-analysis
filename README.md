@@ -1,8 +1,8 @@
 # GA360 E-Commerce Funnel Analysis
 
-> **903,653 sessions. $1.78M in revenue. $479K left on the table.**
+> **903,653 sessions. $1.78M in revenue. $379.5K left on the table.**
 > This analysis pinpoints the five conversion bottlenecks costing the Google
-> Merchandise Store nearly half a million dollars in addressable revenue and
+> Merchandise Store over $375k in addressable revenue and
 > lays out a prioritized, statistically validated roadmap to capture it.
 
 ---
@@ -10,14 +10,14 @@
 ## The Business Case
 The store converts **1.28%** of sessions end-to-end. That number hides five
 distinct failure modes, each backed by funnel data and Chi-Squared significance
-testing. Fix them in priority order and the model projects ** 3,110 additional
-transactions (~$479K)** in incremental revenue.
+testing. Fix them in priority order and the model projects ** 2463 additional
+transactions (~$379.5K)** in incremental revenue.
 
 | What's Broken | Scale of the Problem | Why It Matters | Estimated Revenue Upside |
 |---|---|---|--:|
 | Homepage fails to route users into the catalog | 86.2% of sessions drop here (779K sessions lost) | Largest absolute volume leak in the funnel | ~$200,000 |
-| Product pages don't convert browsers to buyers | 59.6% view a product but never add to cart | Signals UX friction: pricing, imagery, or social proof gaps | ~$123,000 |
 | Mobile checkout is broken | 0.41% CR vs. 1.58% desktop (p < 0.001) | 23% of traffic, 7.4% of transactions | ~$125,000 |
+| Product pages don't convert browsers to buyers | 59.6% view a product but never add to cart | Signals UX friction: pricing, imagery, or social proof gaps | ~$23,500 |
 | Referral traffic delivers volume, not value | 29% of sessions, 0.11% CR ($47K revenue) | 21x worse than direct—budget is being wasted | ~$31,000 |
 | International traffic can't convert | 59.6% of traffic, 2.4% of revenue | Structural barrier (shipping/currency) or misaligned acquisition | Strategic decision |
 
@@ -64,22 +64,7 @@ to Category View and an estimated **~$200K** in revenue.
 
 ---
 
-### 2. Product Pages Browse Well but Fails to convert
-74,049 sessions reach a product page; 59.6% leave without adding to cart.
-Users are interested enough to click in, but something on the page kills
-momentum. The likely culprits, based on common PDP failure patterns at this
-drop-off magnitude: unclear pricing, single-angle photography, absent
-reviews, or a buried Add to Cart button.
-
-**Data-backed Recommendations:** Run heatmap analysis (Hotjar or equivalent) to
-identify scroll-depth abandonment. Prioritize adding customer reviews,
-multi-angle product imagery, inventory urgency signals, and
-repositioning the Add to Cart CTA. 
-Target: reduce drop-off to 50%, yielding **~$123K** in additional revenue.
-
----
-
-### 3. Mobile Conversion Crisis: A 3.9× Performance Gap below Desktop
+### 2. Mobile Conversion Crisis: A 3.9× Performance Gap below Desktop
 
 | Device | Sessions | Conversion Rate | Share of Transactions |
 |---|--:|--:|--:|
@@ -100,6 +85,20 @@ Conservative target (0.41% → 0.80%): **~$125K** uplift.
 ![Device Funnel Comparison](assets/device_funnel.png)
 
 ---
+### 3. Product Pages Browse Well but Fails to convert
+74,049 sessions reach a product page; 59.6% leave without adding to cart.
+Users are interested enough to click in, but something on the page kills
+momentum. The likely culprits, based on common PDP failure patterns at this
+drop-off magnitude: unclear pricing, single-angle photography, absent
+reviews, or a buried Add to Cart button.
+
+**Data-backed Recommendations:** Run heatmap analysis (Hotjar or equivalent) to
+identify scroll-depth abandonment. Prioritize adding customer reviews,
+multi-angle product imagery, inventory urgency signals, and
+repositioning the Add to Cart CTA. 
+Target: reduce drop-off to 50%, yielding **~$23.5K** in additional revenue.
+
+---
 
 ### 4. Budget Optimization: Underperforming Referral Partnerships 
 Referral sends 262K sessions (29% of traffic) but converts at **0.11%**—21×
@@ -109,7 +108,7 @@ revenue.
 
 **Data-backed Recommendations:** Audit the top 20 referral sources. Terminate or
 renegotiate partners converting below 0.05%. Redirect spend toward organic
-search (0.91% CR, room to grow) and paid search (1.86% CR, second-highest
+search (0.91% CR, room to grow) and paid search (1.86% CR, third-highest
 converting channel). Implement UTM discipline for sub-source tracking.
 Estimated impact: **~$31K** in recovered revenue plus reduced wasted spend.
 
@@ -161,8 +160,8 @@ The scatter plot below maps products by traffic volume (x-axis) and revenue
 | Priority | Initiative | Why This Order | Estimated Impact |
 |:-:|---|---|--:|
 | 1 | Homepage engagement redesign | Highest volume impact, lowest cost | ~$200K |
-| 2 | Mobile checkout UX overhaul | Statistically validated gap, clear ROI | ~$125K |
-| 3 | Product detail page optimization | Second-largest volume leak | ~$123K |
+| 2 | Product detail page optimization | Second-largest volume leak | ~$123K |
+| 3 | Mobile checkout UX overhaul | Statistically validated gap, clear ROI | ~$23.5k |
 | 4 | Referral channel audit | Stops budget waste, quick to execute | ~$31K |
 | 5 | International market decision | Strategic choice, longer timeline | TBD |
 
