@@ -31,6 +31,13 @@ STAGE_LABELS = [
     "Transaction",
 ]
 
+# Outlier Thresholds
+REVENUE_CAP_PERCENTILE = 99.5  # Winsorize converter revenue at this percentile
+MAX_PAGEVIEWS = 200  # Sessions beyond this are most certainly bots or crawlers
+MAX_TIME_ON_SITE = 10800  # 3 hours, sessions beyond this are likely abandoned tabs
+MAX_PAGES_PER_SECOND = 2.0   # anything faster is non-human navigation
+MIN_PAGEVIEWS_FOR_SPEED_CHECK = 5   # Only apply speed check to sessions with enough pages to judge
+
 # Loading
 def load_session_funnel(filepath):
     df = pd.read_csv(filepath, dtype={"fullVisitorId": str})
@@ -69,6 +76,62 @@ def clean_session_funnel(df):
     return df
 
 
+def remove_outliers(df):
+    """Remove sessions that would distort business metrics due to bot traffic,
+    test transactions, or measurement artifacts."""
+
+    #Bot /Crawlers
+    rows_before = len(df)
+    mask_extreme_pv = df["total_pageviews"] > MAX_PAGEVIEWS
+    bot_pv_count = mask_extreme_pv.sum()
+
+    #speed
+    has_time = df["time_on_site"] > 0
+    enough_pages = df["total_pageviews"] >= MIN_PAGEVIEWS_FOR_SPEED_CHECK
+    pages_per_sec = df["total_pageviews"] / df["time_on_site"].replace(0, np.nan)
+    mask_speed_bot = has_time & enough_pages & (pages_per_sec > MAX_PAGES_PER_SECOND)
+    bot_speed_count = mask_speed_bot.sum()
+
+    # Multi signal
+    mask_bot = mask_extreme_pv | mask_speed_bot
+    total_bot_count = mask_bot.sum()
+
+    df = df[~mask_bot].copy()
+
+    print(f"Bot removal: {total_bot_count:,} sessions dropped "
+          f"({bot_pv_count:,} extreme pageviews, "
+          f"{bot_speed_count:,} impossible browsing speed)")
+
+   
+   # time on site camping
+    capped_time_count = (df["time_on_site"] > MAX_TIME_ON_SITE).sum()
+    df["time_on_site"] = df["time_on_site"].clip(upper=MAX_TIME_ON_SITE)
+
+    print(f"Time-on-site capping: {capped_time_count:,} sessions "
+          f"capped at {MAX_TIME_ON_SITE:,}s ({MAX_TIME_ON_SITE // 3600}h)")
+
+    # Revenue Winsorization
+    converters = df.loc[df["transaction_revenue_usd"] > 0, "transaction_revenue_usd"]
+    revenue_cap = converters.quantile(REVENUE_CAP_PERCENTILE / 100)
+    capped_rev_count = (df["transaction_revenue_usd"] > revenue_cap).sum()
+
+    df["transaction_revenue_usd"] = df["transaction_revenue_usd"].clip(upper=revenue_cap)
+
+    print(f"Revenue Winsorization: {capped_rev_count:,} transactions "
+          f"capped at ${revenue_cap:,.2f} "
+          f"(p{REVENUE_CAP_PERCENTILE} of converter revenue)")
+
+
+    # Summary
+    rows_after = len(df)
+    rows_dropped = rows_before - rows_after
+    print(f"Outlier handling complete. "
+          f"Rows: {rows_before:,} -> {rows_after:,} "
+          f"({rows_dropped:,} dropped, "
+          f"{capped_time_count + capped_rev_count:,} values capped)")
+    return df
+
+#cleaning
 def clean_product_performance(df):
     """Normalizing values to Uncategorized to ensure category level aggregation remain accurate."""
 
